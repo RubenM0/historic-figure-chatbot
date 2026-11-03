@@ -1,0 +1,85 @@
+/* make custom fonts universal */
+@font-face {
+    font-family: Spectral;
+    src: url("/fonts/Spectral-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: Spectral;
+  src: url("/fonts/Spectral-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: Spectral;
+    src: url("/fonts/Spectral-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* universal defaults in whatever fields chosen */
+:root {
+  /* --bg: #141414; */
+  --text: #000000;
+  --muted: #403f3f;
+  --line: #2a2a2a;
+  --max: 1120px;
+  --sans: "Spectral", "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+  color: var(--text);
+  background: var(--bg);
+  color-scheme: dark;
+  font: 16px/1.5 var(--sans);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  font-family: Spectral, serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+  text-size-adjust: 100%;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+/* display an entire image for the background */
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-image: url("/public/romeart.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* bio styling */
+
+#bio {
+  text-align: center;
+}
+
+.bio-title {
+  font-size: 40px;
+  text-align: center;
+}
+
+.bio-copy {
+  max-width: 840px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: var(--muted);
+  text-align: center;
+  font-size: 20px;
+}

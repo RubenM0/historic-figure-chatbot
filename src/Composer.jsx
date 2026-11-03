@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import './Composer.css'
 
-function Composer() {
+
+export default function Composer() {
   const [text, setText] = useState('')
 
   return (
@@ -23,8 +24,13 @@ function Composer() {
       <button className="composer-button" type="submit">
         Send
       </button>
+
+
+
     </form>
+
+
+
+
   )
 }
-
-export default Composer
