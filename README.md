@@ -7,4 +7,6 @@ npm install
 npm run dev
 ```
 
-# TODO list (write a task and put your name next to it if you're working on it e.g. Add dark and light mode - Karim):
+### wWite tasks to work on and put your name next to it if you're working on it e.g. Add dark and light mode - Karim
+
+# TODO:
