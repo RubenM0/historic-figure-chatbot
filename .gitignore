@@ -25,3 +25,7 @@ dist-ssr
 
 .env
 .env.*
+
+# Local agent skills, not for the repo yet
+.claude/
+.agents/

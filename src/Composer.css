@@ -1,5 +1,6 @@
 .composer {
   position: fixed;
+  z-index: 2;
   bottom: 1.5rem;
   left: 50%;
   transform: translateX(-50%);

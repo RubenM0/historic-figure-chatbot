@@ -1,3 +1,11 @@
 h1 {
   font-family: Spectral, serif;
 }
+
+.page {
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10.5rem;
+}
