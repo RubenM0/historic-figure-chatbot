@@ -3,11 +3,27 @@
   box-sizing: border-box;
   width: min(32rem, calc(100% - 2rem));
   margin: 1.5rem auto 0;
-  min-height: 24.5rem;
+  /* auto min-height would grow the page instead of scrolling the panel */
+  min-height: 0;
   padding: 1rem 1.25rem;
   overflow: auto;
   border: 1px solid var(--line);
   border-radius: 0.5rem;
   background: rgb(255 255 255 / 88%);
   color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.chat-message {
+  margin: 0;
+  max-width: 80%;
+  padding: 0.4rem 0.75rem;
+  border-radius: 0.5rem;
+  background: #222;
+  color: #fff;
+  overflow-wrap: anywhere;
+  text-align: left;
 }

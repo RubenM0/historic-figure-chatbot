@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import './Composer.css'
 
-
-export default function Composer() {
+export default function Composer({ onSend }) {
   const [text, setText] = useState('')
 
   return (
@@ -10,6 +9,9 @@ export default function Composer() {
       className="composer"
       onSubmit={(event) => {
         event.preventDefault()
+        const trimmed = text.trim()
+        if (!trimmed) return
+        onSend(trimmed)
         setText('')
       }}
     >
@@ -24,13 +26,6 @@ export default function Composer() {
       <button className="composer-button" type="submit">
         Send
       </button>
-
-
-
     </form>
-
-
-
-
   )
 }

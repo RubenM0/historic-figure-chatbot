@@ -4,8 +4,9 @@ h1 {
 
 .page {
   box-sizing: border-box;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   padding-bottom: 10.5rem;
 }
