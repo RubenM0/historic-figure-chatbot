@@ -12,3 +12,5 @@ npm run dev
 # TODO:
 * Getting text to display in the chat box when user sends a message
 * Show image of historic figure next to chat box
+* Fix chatbot display to actually have a dedicated section for it
+* Add theming such as Light and Dark mode
