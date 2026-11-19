@@ -17,7 +17,10 @@ export default function ChatWindow({ messages = [] }) {
       aria-live="polite"
     >
       {messages.map((m) => (
-        <p className="chat-message" key={m.id}>
+        <p
+          className={m.role === 'figure' ? 'chat-message chat-message-figure' : 'chat-message'}
+          key={m.id}
+        >
           {m.text}
         </p>
       ))}

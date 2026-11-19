@@ -13,11 +13,12 @@
   color: var(--text);
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   gap: 4px;
 }
 
+/* chat message for user and align right */
 .chat-message {
+  align-self: flex-end;
   margin: 0;
   max-width: 80%;
   padding: 0.4rem 0.75rem;
@@ -26,4 +27,11 @@
   color: #fff;
   overflow-wrap: anywhere;
   text-align: left;
+}
+
+/* chat message for historic figure and align left */
+.chat-message-figure {
+  align-self: flex-start;
+  background: #d0d0d0;
+  color: #222;
 }

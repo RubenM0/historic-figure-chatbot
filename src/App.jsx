@@ -7,10 +7,22 @@ function App() {
   const [messages, setMessages] = useState([])
   const nextId = useRef(0)
 
-  function handleSend(text) {
+  async function handleSend(text) {
     const id = nextId.current++
-    setMessages((prev) => [...prev, { id, text }])
+    setMessages((prev) => [...prev, { id, role: "user", text }])
+
+    //Response from backend
+    const response = await fetch("/api/chat", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({ message: text }),
+    })
+
+    const data = await response.json()
+    const replyId = nextId.current++
+    setMessages((prev) => [...prev, { id: replyId, role: "figure", text: data.reply }])
   }
+
 
   return (
     <div className="page">
