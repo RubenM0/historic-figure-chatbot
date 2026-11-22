@@ -2,12 +2,43 @@
 const express = require("express");
 const app = express();
 const port = 3000;
+const responses = require("./responses.json");
 
 app.use(express.json())
 
-//Recieve and reply to user message
+function wordsIn(message) {
+    return message.toLowerCase().split(/\W+/).filter(Boolean)
+}
+
+// Add the weights of keywords that appear as whole words
+function scoreReply(words, reply) {
+    let score = 0
+    for (const word of words) {
+        const weight = reply.keywords[word]
+        if (weight) {
+            score += weight
+        }
+    }
+    return score
+}
+
 function replyToChat(message) {
-    return "I'm Julius I think"
+    const words = wordsIn(message)
+    let best = null
+    let bestScore = 0
+
+    for (const reply of responses.replies) {
+        const score = scoreReply(words, reply)
+        if (score > bestScore) {
+            best = reply
+            bestScore = score
+        }
+    }
+
+    if (!best) {
+        return responses.fallback
+    }
+    return best.text
 }
 
 //Request and Response

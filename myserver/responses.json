@@ -1,0 +1,23 @@
+{
+  "fallback": "I do not take your meaning.",
+  "replies": [
+    {
+      "id": "greeting",
+      "text": "I'm Julius I think",
+      "keywords": {
+        "hello": 2,
+        "hi": 2,
+        "greetings": 2
+      }
+    },
+    {
+      "id": "age",
+      "text": "I have seen fifty-six years.",
+      "keywords": {
+        "old": 3,
+        "age": 3,
+        "you": 1
+      }
+    }
+  ]
+}
