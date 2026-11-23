@@ -1,15 +1,11 @@
 .chat-window {
   flex: 1;
   box-sizing: border-box;
-  width: min(32rem, calc(100% - 2rem));
-  margin: 1.5rem auto 0;
-  /* auto min-height would grow the page instead of scrolling the panel */
   min-height: 0;
-  padding: 1rem 1.25rem;
-  overflow: auto;
-  border: 1px solid var(--line);
-  border-radius: 0.5rem;
-  background: rgb(255 255 255 / 88%);
+  padding: 0.75rem 1.25rem 1rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: transparent;
   color: var(--text);
   display: flex;
   flex-direction: column;
@@ -23,8 +19,8 @@
   max-width: 80%;
   padding: 0.4rem 0.75rem;
   border-radius: 0.5rem;
-  background: #222;
-  color: #fff;
+  background: rgb(92 67 40 / 78%);
+  color: #fff8e9;
   overflow-wrap: anywhere;
   text-align: left;
 }
@@ -32,6 +28,6 @@
 /* chat message for historic figure and align left */
 .chat-message-figure {
   align-self: flex-start;
-  background: #d0d0d0;
-  color: #222;
+  background: rgb(211 189 142 / 72%);
+  color: #342718;
 }

@@ -1,31 +1,57 @@
 .composer {
-  position: fixed;
   z-index: 2;
-  bottom: 1.5rem;
-  left: 50%;
-  transform: translateX(-50%);
+  flex-shrink: 0;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 0.75rem;
-  width: min(32rem, calc(100% - 2rem));
+  gap: 0.25rem;
+  width: min(80%, 24rem);
+  margin: 1rem 1rem 0 auto;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  background: transparent;
+}
+
+.composer:focus-within {
+  outline: 2px solid #5c4328;
+  outline-offset: 2px;
 }
 
 .composer-input {
   box-sizing: border-box;
-  width: 100%;
-  padding: 0.75rem 1rem;
-  border: 1px solid #ccc;
-  border-radius: 0.5rem;
+  min-width: 0;
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border: 0;
+  border-radius: 0.35rem;
+  outline: 0;
+  background: transparent;
+  color: #342718;
   font: inherit;
 }
 
+.composer-input::placeholder {
+  color: rgb(52 39 24 / 70%);
+}
+
 .composer-button {
-  padding: 0.6rem 1.25rem;
-  border: 1px solid #222;
-  border-radius: 0.5rem;
-  background: #222;
-  color: #fff;
-  font: inherit;
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  flex-shrink: 0;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: rgb(92 67 40 / 88%);
+  color: #fff8e9;
   cursor: pointer;
+}
+
+.composer-button svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
 }

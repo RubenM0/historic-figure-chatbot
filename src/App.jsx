@@ -31,8 +31,18 @@ function App() {
       <section id="bio">
         <h2 className="bio-title">Julius Caesar</h2>
       </section>
-      <ChatWindow messages={messages} />
-      <Composer onSend={handleSend} />
+      <div className="chat-stage">
+        <img
+          className="chat-parchment"
+          src="/images/parchment.png"
+          alt=""
+          aria-hidden="true"
+        />
+        <section className="chat-panel" aria-label="Chat">
+          <Composer onSend={handleSend} />
+          <ChatWindow messages={messages} />
+        </section>
+      </div>
     </div>
   )
 }

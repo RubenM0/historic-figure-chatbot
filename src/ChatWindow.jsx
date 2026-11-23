@@ -6,7 +6,7 @@ export default function ChatWindow({ messages = [] }) {
 
   useEffect(() => {
     const el = windowRef.current
-    if (el) el.scrollTop = el.scrollHeight
+    if (el) el.scrollTop = 0
   }, [messages])
 
   return (
@@ -16,7 +16,7 @@ export default function ChatWindow({ messages = [] }) {
       aria-label="Messages"
       aria-live="polite"
     >
-      {messages.map((m) => (
+      {messages.slice().reverse().map((m) => (
         <p
           className={m.role === 'figure' ? 'chat-message chat-message-figure' : 'chat-message'}
           key={m.id}
