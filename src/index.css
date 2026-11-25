@@ -1,3 +1,4 @@
+/*universal styling settings */
 /* make custom fonts universal */
 @font-face {
     font-family: Spectral;
@@ -25,10 +26,15 @@
 
 /* universal defaults in whatever fields chosen */
 :root {
-  /* --bg: #141414; */
+  --bg: #f7f2b7;
   --text: #000000;
   --muted: #403f3f;
   --line: #2a2a2a;
+  --ink: #3c2918;
+  --cream: #fff8e9;
+  --parchment: #f6f0e4;
+  --ink-text: #2a2118;
+  --edge: #6b5340;
   --max: 1120px;
   --sans: "Spectral", "Iowan Old Style", "Palatino Linotype", Palatino, serif;
   color: var(--text);
@@ -60,15 +66,4 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-/* bio styling */
-
-#bio {
-  text-align: center;
-}
-
-.bio-title {
-  font-size: 40px;
-  text-align: center;
 }

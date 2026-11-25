@@ -12,22 +12,61 @@
   gap: 4px;
 }
 
-/* chat message for user and align right */
 .chat-message {
-  align-self: flex-end;
   margin: 0;
   max-width: 80%;
   padding: 0.4rem 0.75rem;
   border-radius: 0.5rem;
-  background: rgb(92 67 40 / 78%);
-  color: #fff8e9;
   overflow-wrap: anywhere;
   text-align: left;
 }
 
-/* chat message for historic figure and align left */
+.chat-message-user {
+  align-self: flex-end;
+  background: var(--ink);
+  color: var(--cream);
+}
+
 .chat-message-figure {
   align-self: flex-start;
-  background: rgb(211 189 142 / 72%);
-  color: #342718;
+  background: var(--parchment);
+  color: var(--ink-text);
+  border: 1px solid var(--edge);
+}
+
+.chat-typing {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-width: 3.25rem;
+}
+
+.chat-typing-dot {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--edge);
+  animation: chat-typing-pulse 1s infinite ease-in-out;
+}
+
+.chat-typing-dot:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.chat-typing-dot:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes chat-typing-pulse {
+  0%,
+  80%,
+  100% {
+    opacity: 0.35;
+    transform: translateY(0);
+  }
+
+  40% {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
 }

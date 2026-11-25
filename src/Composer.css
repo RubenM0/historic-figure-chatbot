@@ -1,18 +1,20 @@
+/* the message box */
 .composer {
   z-index: 2;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   gap: 0.25rem;
-  width: min(80%, 24rem);
-  margin: 1rem 1rem 0 auto;
+  width: min(90%, 40rem);
+  margin: 0 1rem 1rem auto;
   padding: 0.25rem;
+  border: 1px solid var(--edge);
   border-radius: 0.5rem;
-  background: transparent;
+  background: var(--parchment);
 }
 
 .composer:focus-within {
-  outline: 2px solid #5c4328;
+  outline: 2px solid var(--edge);
   outline-offset: 2px;
 }
 
@@ -24,13 +26,13 @@
   border: 0;
   border-radius: 0.35rem;
   outline: 0;
-  background: transparent;
-  color: #342718;
+  background: var(--parchment);
+  color: var(--ink-text);
   font: inherit;
 }
 
 .composer-input::placeholder {
-  color: rgb(52 39 24 / 70%);
+  color: var(--edge);
 }
 
 .composer-button {
@@ -41,8 +43,8 @@
   place-items: center;
   border: 0;
   border-radius: 50%;
-  background: rgb(92 67 40 / 88%);
-  color: #fff8e9;
+  background: var(--ink);
+  color: var(--cream);
   cursor: pointer;
 }
 
