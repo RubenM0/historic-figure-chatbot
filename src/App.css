@@ -52,13 +52,25 @@ h1 {
 
 .caesar-img {
   position: fixed;
-  right: 450px;
-  top: 54%;
-  transform: translateY(-50%); 
-  width: 260px;
-  height: 550px;
+  left: calc(50% + 20rem);
+  top: 54vh;
+  transform: translateY(-50%);
+  width: clamp(9rem, 18vw, 16.25rem);
+  height: min(34.375rem, 72vh);
   object-fit: cover;
   object-position: top;
   border: 3px solid #8b5a2b;
   border-radius: 8px;
+}
+
+@media (max-width: 1050px) {
+  .caesar-img {
+    right: 0.75rem;
+    left: auto;
+    top: auto;
+    bottom: 1rem;
+    width: clamp(6rem, 24vw, 9rem);
+    height: min(42vh, 18rem);
+    transform: none;
+  }
 }

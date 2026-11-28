@@ -3,6 +3,7 @@ import './App.css'
 import ChatWindow from './ChatWindow.jsx'
 import Composer from './Composer.jsx'
 import Settings from './Settings.jsx'
+import Chatbuttons from './Chatbuttons.jsx'
 
 function App() {
   const [messages, setMessages] = useState([])
@@ -49,6 +50,7 @@ function App() {
   return (
     <div className="page">
       <Settings />
+      <Chatbuttons />
       <h1>Historic Figure Chatbot</h1>
 
       <section id="bio">

@@ -1,19 +1,21 @@
 .settings-wrapper {
     position: fixed;
-    top: 16px;
-    right: 20px;
+    bottom: max(16px, env(safe-area-inset-bottom));
+    left: 20px;
     z-index: 1000;
     font-family: Spectral, serif;
 }
 
 .settings-button {
+    box-sizing: border-box;
+    width: clamp(10rem, 18vw, 13rem);
+    min-height: 3.5rem;
     background-color: #f4e4bc;
     color: #2c1e16;
     border: 2px solid #8b5a2b;
     border-radius: 6px;
-     padding: 8px 14px;
-    font-size: 1rem;
-    font-family: inherit;
+    padding: 0.8rem 1rem;
+    font: inherit;
     cursor: pointer;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
     transition: background-color 0.2s ease, transform 0.1s ease;
@@ -29,9 +31,9 @@
 
 .settings-dropdown {
   position: absolute;
-  top: 100%;
-  right: 0;
-  margin-top: 8px;
+  bottom: 100%;
+  left: 0;
+  margin-bottom: 8px;
   width: 220px;
   background-color: #f9efd6;
   border: 2px solid #8b5a2b;
@@ -47,4 +49,17 @@
   font-style: italic;
   color: #5c4033;
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  .settings-wrapper {
+    left: 12px;
+  }
+
+  .settings-button {
+    width: clamp(8rem, 34vw, 10rem);
+    min-height: 3rem;
+    padding: 0.65rem;
+    font-size: 1rem;
+  }
 }
