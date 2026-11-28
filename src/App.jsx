@@ -2,6 +2,7 @@ import { useRef, useState } from 'react'
 import './App.css'
 import ChatWindow from './ChatWindow.jsx'
 import Composer from './Composer.jsx'
+import Settings from './Settings.jsx'
 
 function App() {
   const [messages, setMessages] = useState([])
@@ -47,6 +48,7 @@ function App() {
 
   return (
     <div className="page">
+      <Settings />
       <h1>Historic Figure Chatbot</h1>
 
       <section id="bio">
@@ -64,6 +66,9 @@ function App() {
           <Composer onSend={handleSend} />
         </section>
       </div>
+
+      <img className="caesar-img" src="/images/Caesar.png" alt="Julius Caesar" />
+
     </div>
   )
 }

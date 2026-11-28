@@ -1,5 +1,6 @@
 h1 {
   font-family: Spectral, serif;
+  text-align: center;
 }
 
 .page {
@@ -43,4 +44,21 @@ h1 {
   overflow: hidden;
   border-radius: 0.5rem;
   background-color: transparent;
+}
+
+.bio-title {
+  text-align: center;
+}
+
+.caesar-img {
+  position: fixed;
+  right: 450px;
+  top: 54%;
+  transform: translateY(-50%); 
+  width: 260px;
+  height: 550px;
+  object-fit: cover;
+  object-position: top;
+  border: 3px solid #8b5a2b;
+  border-radius: 8px;
 }

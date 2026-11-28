@@ -1,0 +1,50 @@
+.settings-wrapper {
+    position: fixed;
+    top: 16px;
+    right: 20px;
+    z-index: 1000;
+    font-family: Spectral, serif;
+}
+
+.settings-button {
+    background-color: #f4e4bc;
+    color: #2c1e16;
+    border: 2px solid #8b5a2b;
+    border-radius: 6px;
+     padding: 8px 14px;
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.settings-button:hover {
+  background-color: #ead196;
+}
+
+.settings-button:active {
+  transform: scale(0.98);
+}
+
+.settings-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  width: 220px;
+  background-color: #f9efd6;
+  border: 2px solid #8b5a2b;
+  border-radius: 6px;
+  padding: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  color: #2c1e16;
+}
+
+.settings-placeholder {
+  margin: 0;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #5c4033;
+  text-align: center;
+}
